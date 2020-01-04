@@ -52,6 +52,7 @@
     <Compile Include="PalindromeTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RightMostSetBitTest.cs" />
+    <Compile Include="RightMostDifferentBitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
