@@ -20,12 +20,27 @@ namespace Questions.UnitTest
             Assert.AreEqual(2, rightMost.GetRightMostSetBit1(10));// 1010
             Assert.AreEqual(5, rightMost.GetRightMostSetBit1(16));// 10000
             Assert.AreEqual(3, rightMost.GetRightMostSetBit1(20));// 10100
-
             Assert.AreEqual(0, rightMost.GetRightMostSetBit1(0));// 0000
-
             Assert.AreEqual(1, rightMost.GetRightMostSetBit1(-1));// 111111 (all 32 bits will be 1) 2's complement of 0001
-
             Assert.AreEqual(2, rightMost.GetRightMostSetBit1(-10));// 28 1's and 0110  2's complement of 1010
+        }
+        [TestMethod]
+        public void TestGetRightMostSetBit2()
+        {
+            RightMostSetBit rightMost = new RightMostSetBit();
+            Assert.AreEqual(1, rightMost.GetRightMostSetBit2(1)); // 0001
+            Assert.AreEqual(2, rightMost.GetRightMostSetBit2(2)); // 0010
+            Assert.AreEqual(1, rightMost.GetRightMostSetBit2(3)); // 0011
+            Assert.AreEqual(3, rightMost.GetRightMostSetBit2(4)); // 0100
+            Assert.AreEqual(1, rightMost.GetRightMostSetBit2(5)); // 0101
+            Assert.AreEqual(2, rightMost.GetRightMostSetBit2(6)); // 0110
+            Assert.AreEqual(4, rightMost.GetRightMostSetBit2(8)); // 1000
+            Assert.AreEqual(2, rightMost.GetRightMostSetBit2(10));// 1010
+            Assert.AreEqual(5, rightMost.GetRightMostSetBit2(16));// 10000
+            Assert.AreEqual(3, rightMost.GetRightMostSetBit2(20));// 10100
+            Assert.AreEqual(0, rightMost.GetRightMostSetBit2(0));// 0000
+            Assert.AreEqual(1, rightMost.GetRightMostSetBit2(-1));// 111111 (all 32 bits will be 1) 2's complement of 0001
+            Assert.AreEqual(2, rightMost.GetRightMostSetBit2(-10));// 28 1's and 0110  2's complement of 1010
         }
     }
 }

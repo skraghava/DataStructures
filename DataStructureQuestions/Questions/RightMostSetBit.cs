@@ -29,5 +29,17 @@ namespace Questions
 
             return number == 0 ? 0 : (int)Math.Log(number & -number, 2) + 1;
         }
+
+        /// <summary>
+        /// this method is same as GetRightMostSetBit1 except that say your favorite language is not having base 2 log .. 
+        /// so you can take decimal log of 2^n and devide it by decimal log of 2 which will again gives n
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
+        public int GetRightMostSetBit2(int number)
+        {
+
+            return number == 0 ? 0 : (int)(Math.Log10(number & -number)/ Math.Log10(2)) + 1;
+        }
     }
 }
