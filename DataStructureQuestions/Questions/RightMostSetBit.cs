@@ -16,6 +16,14 @@ namespace Questions
          Negative numbers are represented using 2's complement
 
          */
+
+        /// <summary>
+        ///  number & (bitwise and) -number sets 0 for all bits except right most bit and it will always be 2^n like 1,2,4,8.
+        ///  Taking log of base 2 for the above number gives n , + 1 is added to adjust the position
+        ///  covers negative numbers as well. but log is not defined for 0 and hence edge case is handled via conditional if case.
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
         public int GetRightMostSetBit1(int number)
         {
 
