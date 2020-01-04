@@ -41,5 +41,60 @@ namespace Questions
 
             return number == 0 ? 0 : (int)(Math.Log10(number & -number)/ Math.Log10(2)) + 1;
         }
+
+        /// <summary>
+        /// convert to binary and iterate from right most bit and check if the char is '1'
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
+        public int GetRightMostSetBit3(int number)
+        {
+            if (number == 0)
+                return 0;
+            var binaryRepresentation = Convert.ToString(number, 2).ToCharArray();
+            int  pos = 1;
+            for (int i = binaryRepresentation.Length-1; i>=0; i--)
+            {
+                if (binaryRepresentation[i] == '1')
+                    break;
+                pos++;
+            }
+            return pos;
+        }
+
+        /// <summary>
+        /// same logic as method 3
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
+        public int GetRightMostSetBit4(int number)
+        {
+            if (number == 0)
+                return 0;
+            var binaryRepresentation = Convert.ToString(number, 2);
+            int pos = 1;
+            for (int i = binaryRepresentation.Length - 1; i >= 0; i--)
+            {
+                if (binaryRepresentation[i] == '1')
+                    break;
+                pos++;
+            }
+            return pos;
+        }
+
+        public int GetRightMostSetBit5(int number)
+        {
+            if (number == 0)
+                return 0;
+            
+            int pos = 1;
+            for (int i = 0; i < 32; i++)
+            {
+                if ((number & (int)Math.Pow(2,i)) > 0)
+                    break;
+                pos++;
+            }
+            return pos;
+        }
     }
 }
