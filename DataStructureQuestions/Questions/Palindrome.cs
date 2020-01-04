@@ -8,6 +8,11 @@ namespace Questions
 {
     public class Palindrome
     {
+        /// <summary>
+        ///  Finds if Given input string is Palindrome or not
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public bool IsPalindrome(string input)
         {
             bool isPalindrome = true;
